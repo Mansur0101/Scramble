@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Welcome to Scramble.</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/vue@next"></script>
-</head>
-
-<body>
-
-  <script src="scramble.js"></script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Scramble game</title>
+    <script src="https://unpkg.com/vue"></script>
+    
+  </head>
+  <body>
+    <div id="app" class="container">
+        <h1>Welcome to Scrameble.</h1>
+        <div ref="alert" :class="game.alertClass" v-if="game.isVisible" role="alert">
+          <strong> {{ game.messageBody }} </strong>
+        </div>
+        <div class=push-down>
+        <h3 class="pull-left">{{ game.points }}<br/> Points</h3><h3 class="pull-right">{{ game.strikes }} <br/>Strikes</h3>
+        <br><br>
+          <span>
+            <h1 class="scrumbled-word">
+              {{ game.scrambledWord }}
+            </h1>
+          </span>
+        <input type="text" class="form-control form-control-lg" v-model="game.guess" name="game.guess" @keyup.enter="guessWord" :disabled="game.disabled == 1"/>
+        <br>
+        <button type="button" class="btn btn-danger" @click="passWord">
+          <span class="badge badge-light">{{ game.passes }}</span> Passes Remaining 
+        </button>
+        <div v-if="game.playAgainVisible" class="push-down">
+          <button type="button" class="btn btn-primary btn-lg"  @click="playAgain">
+            Play again
+          </button>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>

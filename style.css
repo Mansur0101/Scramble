@@ -1,0 +1,133 @@
+.pull-left {
+  float: left;
+  background-color: #30A872;
+  color: white;
+  padding: 1rem;
+
+  border-radius: 20px;
+}
+.pull-right {
+  float: right;
+  color: white;
+  padding: 1rem;
+  background-color: #FF5287;
+  border-radius: 20px;
+}
+
+.scrumbled-word{
+  letter-spacing: 10px;
+}
+.push-down {
+  margin-top: 4rem;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+html{
+  
+  display: block;
+  align-items: center;
+  justify-content: center;
+  /* fallback for old browsers */
+  background: #FFFFFF !important;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: #FFFFFF   !important;
+}
+body {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  /* fallback for old browsers */
+  background: #FFFFFF ;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: #FFFFFF ;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+  max-width: 800px;
+  font-family: "Proxima Nova", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #4A5278;
+  border-color: #4A5278;
+}
+
+
+
+ul.ks-cboxtags {
+  list-style: none;
+  padding: 20px;
+}
+ul.ks-cboxtags li {
+  display: inline;
+}
+ul.ks-cboxtags li label {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(139, 139, 139, 0.3);
+  color: #adadad;
+  border-radius: 25px;
+  white-space: nowrap;
+  margin: 3px 0px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s;
+}
+
+ul.ks-cboxtags li label {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+ul.ks-cboxtags li label::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  padding: 2px 6px 2px 2px;
+  content: "\f067";
+  transition: transform 0.3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
+  content: "\f00c";
+  transform: rotate(-360deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+  border: 2px solid #1bdbf8;
+  background-color: #12bbd4;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+ul.ks-cboxtags li input[type="checkbox"] {
+  display: absolute;
+}
+ul.ks-cboxtags li input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+ul.ks-cboxtags li input[type="checkbox"]:focus + label {
+  border: 2px solid #e9a1ff;
+}
